@@ -144,7 +144,7 @@ jobs:
         if: ${{ env.update_public_key != '' }}
         shell: bash
         run: |
-          curl -sSL -o allow_custom_update.py https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/allow_custom_update.py
+          curl -sSL -o allow_custom_update.py https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/allow_custom_update.py
           python3 allow_custom_update.py \
             --rustdesk-root . \
             --update-url "${{ env.downloadLink}}/api/version/latest" \
@@ -285,9 +285,9 @@ jobs:
           retry_wait_seconds: 15
           shell: pwsh
           command: |
-            Invoke-WebRequest -Uri https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/allowCustom.py -OutFile allowCustom.py
+            Invoke-WebRequest -Uri https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/allowCustom.py -OutFile allowCustom.py
             python allowCustom.py
-            Invoke-WebRequest -Uri https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/forcePresetPassword.py -OutFile forcePresetPassword.py
+            Invoke-WebRequest -Uri https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/forcePresetPassword.py -OutFile forcePresetPassword.py
             python forcePresetPassword.py
 
       - name: Install LLVM and Clang

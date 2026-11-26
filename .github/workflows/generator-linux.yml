@@ -157,7 +157,7 @@ jobs:
         if: ${{ env.update_public_key != '' }}
         shell: bash
         run: |
-          curl -sSL -o allow_custom_update.py https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/allow_custom_update.py
+          curl -sSL -o allow_custom_update.py https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/allow_custom_update.py
           python3 allow_custom_update.py \
             --rustdesk-root . \
             --update-url "${{ env.downloadLink}}/api/version/latest" \
@@ -367,18 +367,18 @@ jobs:
           retry_wait_seconds: 15
           shell: bash
           command: |
-            wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/allowCustom.py
+            wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/allowCustom.py
             python allowCustom.py
-            wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/forcePresetPassword.py
+            wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/forcePresetPassword.py
             python forcePresetPassword.py
-            wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/removeSetupServerTip.diff
+            wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/removeSetupServerTip.diff
             git apply removeSetupServerTip.diff
             echo -n '${{ env.custom }}' > ./custom_.txt
 
       - name: apply theme colors
         shell: bash
         run: |
-          wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/themeColors.py
+          wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/themeColors.py
           python themeColors.py
           
       - name: change url to custom
@@ -427,7 +427,7 @@ jobs:
           retry_wait_seconds: 15
           shell: bash
           command: |
-            wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/xoffline.py
+            wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/xoffline.py
             python xoffline.py
 
       - name: hide-cm
@@ -439,7 +439,7 @@ jobs:
           retry_wait_seconds: 15
           shell: bash
           command: |
-            wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/hidecm.diff
+            wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/hidecm.diff
             git apply hidecm.diff
         
       - name: removeNewVersionNotif
@@ -885,7 +885,7 @@ jobs:
         if: ${{ env.update_public_key != '' }}
         shell: bash
         run: |
-          curl -sSL -o allow_custom_update.py https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/allow_custom_update.py
+          curl -sSL -o allow_custom_update.py https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/allow_custom_update.py
           python3 allow_custom_update.py \
             --rustdesk-root . \
             --update-url "${{ env.downloadLink}}/api/version/latest" \
@@ -1093,18 +1093,18 @@ jobs:
           retry_wait_seconds: 15
           shell: bash
           command: |
-            wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/allowCustom.py
+            wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/allowCustom.py
             python allowCustom.py
-            wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/forcePresetPassword.py
+            wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/forcePresetPassword.py
             python forcePresetPassword.py
-            wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/removeSetupServerTip.diff
+            wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/removeSetupServerTip.diff
             git apply removeSetupServerTip.diff
             echo -n '${{ env.custom }}' > ./custom_.txt
 
       - name: apply theme colors
         shell: bash
         run: |
-          wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/themeColors.py
+          wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/themeColors.py
           python themeColors.py
           
       - name: change url to custom
@@ -1153,7 +1153,7 @@ jobs:
           retry_wait_seconds: 15
           shell: bash
           command: |
-            wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/xoffline.py
+            wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/xoffline.py
             python xoffline.py
 
       - name: hide-cm
@@ -1165,7 +1165,7 @@ jobs:
           retry_wait_seconds: 15
           shell: bash
           command: |
-            wget https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/hidecm.diff
+            wget https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/hidecm.diff
             git apply hidecm.diff
         
       - name: removeNewVersionNotif
@@ -1459,7 +1459,7 @@ jobs:
         if: ${{ env.update_public_key != '' }}
         shell: bash
         run: |
-          curl -sSL -o allow_custom_update.py https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/allow_custom_update.py
+          curl -sSL -o allow_custom_update.py https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/allow_custom_update.py
           python3 allow_custom_update.py \
             --rustdesk-root . \
             --update-url "${{ env.downloadLink}}/api/version/latest" \
@@ -1631,7 +1631,7 @@ jobs:
         if: ${{ env.update_public_key != '' }}
         shell: bash
         run: |
-          curl -sSL -o allow_custom_update.py https://raw.githubusercontent.com/bryangerlach/rdgen/refs/heads/master/.github/patches/allow_custom_update.py
+          curl -sSL -o allow_custom_update.py https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/allow_custom_update.py
           python3 allow_custom_update.py \
             --rustdesk-root . \
             --update-url "${{ env.downloadLink}}/api/version/latest" \
