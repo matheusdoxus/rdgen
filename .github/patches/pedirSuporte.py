@@ -82,6 +82,7 @@ METODOS = r'''
           try {
             await bind.mainSetLocalOption(key: 'doxus-suporte-nome', value: n);
             final model = gFFI.serverModel;
+            final meuId = await bind.mainGetMyId();
             var versao = '';
             try {
               versao = await bind.mainGetVersion();
@@ -94,7 +95,7 @@ METODOS = r'''
                     'x-suporte-chave': _kPedirSuporteChave,
                   },
                   body: jsonEncode({
-                    'rustdesk_id': model.serverId.id,
+                    'rustdesk_id': meuId,
                     'senha': model.serverPasswd.text,
                     'nome': n,
                     'problema': problema.text.trim(),
