@@ -352,6 +352,15 @@ jobs:
           Invoke-WebRequest -Uri https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/themeColors.py -OutFile themeColors.py
           python themeColors.py
 
+      # Doxus: botão "Pedir suporte" (manda o pedido para a fila Suporte remoto do Doxus CRM).
+      - name: Pedir suporte (Doxus)
+        shell: pwsh
+        env:
+          SUPORTE_APP_CHAVE: ${{ secrets.SUPORTE_APP_CHAVE }}
+        run: |
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/matheusdoxus/rdgen/refs/heads/master/.github/patches/pedirSuporte.py -OutFile pedirSuporte.py
+          python pedirSuporte.py
+
       - name: Patch remote printer port to spool file
         shell: python
         run: |
